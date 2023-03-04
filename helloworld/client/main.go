@@ -5,6 +5,8 @@ import (
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
+
+	pb "github.com/alexandreps1123/grpc-go/sum/proto"
 )
 
 var addr string = "localhost:50051"
@@ -21,4 +23,8 @@ func main() {
 		log.Fatalf("Failed to connect: %v\n", err)
 	}
 	defer conn.Close()
+
+	c := pb.NewHelloWorldServiceClient(conn)
+
+	doHelloWorld(c)
 }

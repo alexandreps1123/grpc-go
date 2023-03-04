@@ -8,7 +8,7 @@ import (
 )
 
 func (s *Server) HelloWorld(ctx context.Context, in *pb.HelloWorldRequest) (*pb.HelloWorldResponse, error) {
-	log.Printf("HelloWorld functionwas invoked with %v\n", in)
+	log.Printf("HelloWorld function was invoked with %v\n", in)
 
-	return &pb.HelloWorldResponse{Result: "Hello" + in.Hello}, nil
+	return &pb.HelloWorldResponse{Result: "Hello " + in.Name}, nil
 }

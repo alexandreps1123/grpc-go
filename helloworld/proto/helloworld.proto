@@ -5,7 +5,7 @@ package sum;
 option go_package = "github.com/alexandreps1123/grpc-go/sum/proto";
 
 message HelloWorldRequest {
-    string hello = 1;
+    string name = 1;
 }
 
 message HelloWorldResponse {
