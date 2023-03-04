@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package sum;
+package helloworld;
 
-option go_package = "github.com/alexandreps1123/grpc-go/sum/proto";
+option go_package = "github.com/alexandreps1123/grpc-go/helloworld/proto";
 
 message HelloWorldRequest {
     string name = 1;

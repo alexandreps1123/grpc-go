@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	pb "github.com/alexandreps1123/grpc-go/sum/proto"
+	pb "github.com/alexandreps1123/grpc-go/helloworld/proto"
 )
 
 func doHelloWorld(c pb.HelloWorldServiceClient) {
