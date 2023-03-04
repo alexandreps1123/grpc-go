@@ -13,3 +13,9 @@ $ go mod init github.com/alexandreps1123/grpc-go
 
 generate gRPC code
 $ protoc -Isum/proto --go_out=. --go_opt=module=github.com/alexandreps1123/grpc-go --go-grpc_out=. --go-grpc_opt=module=github.com/alexandreps1123/grpc-go sum/proto/helloworld.proto
+
+go build server
+$ go build -o bin/sum/server ./sum/server
+
+go build client
+$ go build -o bin/sum/client ./sum/client
