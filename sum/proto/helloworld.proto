@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package sum;
+
+option go_package = "github.com/alexandreps1123/grpc-go/sum/proto";
+
+message HelloWorldRequest {
+    string hello = 1;
+}
+
+message HelloWorldResponse {
+    string hello = 1;
+}
+
+service HelloWorldService {
+    rpc HelloWorld (HelloWorldRequest) returns (HelloWorldResponse);
+}
