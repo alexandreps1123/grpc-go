@@ -11,6 +11,9 @@ $ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
 
 $ go mod init github.com/alexandreps1123/grpc-go
 
+update PATH, protoc compiler can find the plugins
+$ export PATH="$PATH:$(go env GOPATH)/bin"
+
 generate gRPC code
 $ protoc -Ihelloworld/proto --go_out=. --go_opt=module=github.com/alexandreps1123/grpc-go --go-grpc_out=. --go-grpc_opt=module=github.com/alexandreps1123/grpc-go helloworld/proto/helloworld.proto
 
