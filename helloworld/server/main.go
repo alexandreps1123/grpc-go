@@ -15,6 +15,7 @@ type Server struct {
 }
 
 func main() {
+	// port listining for client request
 	lis, err := net.Listen("tcp", addr)
 	if err != nil {
 		log.Fatalf("Failed to listen on: %v\n", err)
@@ -22,8 +23,11 @@ func main() {
 
 	log.Printf("Listining on %s\n", addr)
 
+	// instaciate gRPC server
 	s := grpc.NewServer()
+
 	pb.RegisterHelloWorldServiceServer(s, &Server{})
+
 	if err = s.Serve(lis); err != nil {
 		log.Fatalf("Failed to serve: %v\n", err)
 	}
