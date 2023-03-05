@@ -22,3 +22,7 @@ $ go build -o bin/helloworld/server ./helloworld/server
 
 go build client
 $ go build -o bin/helloworld/client ./helloworld/client
+
+
+generate gRPC code
+$ protoc -Icalculator/proto --go_out=. --go_opt=module=github.com/alexandreps1123/grpc-go --go-grpc_out=. --go-grpc_opt=module=github.com/alexandreps1123/grpc-go calculator/proto/calculator.proto calculator/proto/sum.proto calculator/proto/primes.proto

@@ -20,7 +20,7 @@ func main() {
 	}
 	defer conn.Close()
 
-	c := pb.NewcalculatorServiceClient(conn)
+	c := pb.NewCalculatorServiceClient(conn)
 
-	doFactorStream(c)
+	doSum(c)
 }

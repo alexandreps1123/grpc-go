@@ -11,7 +11,7 @@ import (
 var addr string = "0.0.0.0:50001"
 
 type Server struct {
-	pb.calculatorServiceServer
+	pb.CalculatorServiceServer
 }
 
 func main() {
@@ -25,7 +25,7 @@ func main() {
 
 	s := grpc.NewServer()
 
-	pb.RegistercalculatorServiceServer(s, &Server{})
+	pb.RegisterCalculatorServiceServer(s, &Server{})
 
 	if err = s.Serve(lis); err != nil {
 		log.Fatalf("Failed to serve: %v\n", err)
