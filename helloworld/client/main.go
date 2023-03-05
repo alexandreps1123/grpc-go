@@ -26,6 +26,7 @@ func main() {
 
 	c := pb.NewHelloWorldServiceClient(conn)
 
-	doHelloWorld(c)
-	doHelloWorldStream(c)
+	// doHelloWorld(c)
+	// doHelloWorldStream(c)
+	doStreamHelloWorld(c)
 }
