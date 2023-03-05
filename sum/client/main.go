@@ -22,5 +22,5 @@ func main() {
 
 	c := pb.NewSumServiceClient(conn)
 
-	doSum(c)
+	doFactorStream(c)
 }

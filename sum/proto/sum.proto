@@ -6,6 +6,11 @@ option go_package = "github.com/alexandreps1123/grpc-go/sum/proto";
 
 service SumService {
     rpc Sum (SumRequest) returns (SumResponse) {}
+    rpc FactorStream (FactorRequest) returns (stream SumResponse) {}
+}
+
+message FactorRequest {
+    uint32 number = 1;
 }
 
 message SumRequest {
