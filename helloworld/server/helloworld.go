@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"io"
 	"log"
 	"time"
 
@@ -26,5 +27,29 @@ func (s *Server) HelloWorldStream(in *pb.HelloWorldRequest, stream pb.HelloWorld
 			Result: res,
 		})
 	}
+	return nil
+}
+
+func (s *Server) StreamHelloWorld(stream pb.HelloWorldService_StreamHelloWorldServer) error {
+	log.Println("StreamHelloWorld function was invoked")
+
+	res := ""
+
+	for {
+		req, err := stream.Recv()
+
+		if err == io.EOF {
+			return stream.SendAndClose(&pb.HelloWorldResponse{
+				Result: res,
+			})
+		}
+
+		if err != nil {
+			log.Fatalf("Error: %v\n", err)
+		}
+
+		res += fmt.Sprintf("Hello %s!\n", req.GetName())
+	}
+
 	return nil
 }

@@ -15,4 +15,5 @@ message HelloWorldResponse {
 service HelloWorldService {
     rpc HelloWorld (HelloWorldRequest) returns (HelloWorldResponse);
     rpc HelloWorldStream (HelloWorldRequest) returns (stream HelloWorldResponse);
+    rpc StreamHelloWorld (stream HelloWorldRequest) returns (HelloWorldResponse);
 }
