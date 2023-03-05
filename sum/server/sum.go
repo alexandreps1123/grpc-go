@@ -7,6 +7,6 @@ import (
 )
 
 func (s *Server) Sum(ctx context.Context, in *pb.SumRequest) (*pb.SumResponse, error) {
-	c := in.A + in.B
+	c := in.GetA() + in.GetB()
 	return &pb.SumResponse{Result: c}, nil
 }
