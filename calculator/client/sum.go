@@ -5,11 +5,11 @@ import (
 	"io"
 	"log"
 
-	pb "github.com/alexandreps1123/grpc-go/sum/proto"
+	pb "github.com/alexandreps1123/grpc-go/calculator/proto"
 )
 
-func doSum(c pb.SumServiceClient) {
-	res, err := c.Sum(context.Background(), &pb.SumRequest{
+func docalculator(c pb.calculatorServiceClient) {
+	res, err := c.calculator(context.Background(), &pb.calculatorRequest{
 		A: 10,
 		B: 7,
 	})
@@ -20,7 +20,7 @@ func doSum(c pb.SumServiceClient) {
 	log.Println(res.Result)
 }
 
-func doFactorStream(c pb.SumServiceClient) {
+func doFactorStream(c pb.calculatorServiceClient) {
 	log.Println("doFactorStream was invoked")
 	req := &pb.FactorRequest{
 		Number: 500000,

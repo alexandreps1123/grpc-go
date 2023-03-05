@@ -6,7 +6,7 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
-	pb "github.com/alexandreps1123/grpc-go/sum/proto"
+	pb "github.com/alexandreps1123/grpc-go/calculator/proto"
 )
 
 var addr string = "localhost:50001"
@@ -20,7 +20,7 @@ func main() {
 	}
 	defer conn.Close()
 
-	c := pb.NewSumServiceClient(conn)
+	c := pb.NewcalculatorServiceClient(conn)
 
 	doFactorStream(c)
 }

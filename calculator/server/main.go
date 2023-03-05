@@ -4,14 +4,14 @@ import (
 	"log"
 	"net"
 
-	pb "github.com/alexandreps1123/grpc-go/sum/proto"
+	pb "github.com/alexandreps1123/grpc-go/calculator/proto"
 	"google.golang.org/grpc"
 )
 
 var addr string = "0.0.0.0:50001"
 
 type Server struct {
-	pb.SumServiceServer
+	pb.calculatorServiceServer
 }
 
 func main() {
@@ -25,7 +25,7 @@ func main() {
 
 	s := grpc.NewServer()
 
-	pb.RegisterSumServiceServer(s, &Server{})
+	pb.RegistercalculatorServiceServer(s, &Server{})
 
 	if err = s.Serve(lis); err != nil {
 		log.Fatalf("Failed to serve: %v\n", err)
