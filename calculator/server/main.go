@@ -27,7 +27,8 @@ func main() {
 
 	pb.RegisterCalculatorServiceServer(s, &Server{})
 
-	if err = s.Serve(lis); err != nil {
+	err = s.Serve(lis)
+	if err != nil {
 		log.Fatalf("Failed to serve: %v\n", err)
 	}
 }

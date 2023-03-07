@@ -22,6 +22,5 @@ func main() {
 
 	c := pb.NewCalculatorServiceClient(conn)
 
-	// doSum(c)
-	doAVG(c)
+	doMax(c)
 }
