@@ -28,5 +28,6 @@ func main() {
 
 	// doHelloWorld(c)
 	// doHelloWorldStream(c)
-	doStreamHelloWorld(c)
+	// doStreamHelloWorld(c)
+	doStreamHelloWorldStream(c)
 }
