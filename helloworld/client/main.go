@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"time"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
@@ -29,5 +30,6 @@ func main() {
 	// doHelloWorld(c)
 	// doHelloWorldStream(c)
 	// doStreamHelloWorld(c)
-	doStreamHelloWorldStream(c)
+	// doStreamHelloWorldStream(c)
+	doHelloWorldWithDeadline(c, 5*time.Second)
 }

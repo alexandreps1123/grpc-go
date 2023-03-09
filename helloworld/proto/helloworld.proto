@@ -17,4 +17,5 @@ service HelloWorldService {
     rpc HelloWorldStream (HelloWorldRequest) returns (stream HelloWorldResponse);
     rpc StreamHelloWorld (stream HelloWorldRequest) returns (HelloWorldResponse);
     rpc StreamHelloWorldStream (stream HelloWorldRequest) returns (stream HelloWorldResponse);
+    rpc HelloWorldWithDeadline (HelloWorldRequest) returns (HelloWorldResponse);
 }
