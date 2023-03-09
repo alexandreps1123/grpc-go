@@ -38,5 +38,5 @@ $ go build -o bin/helloworld/client ./helloworld/client
 
 generate gRPC code calculator
 ```
-$ protoc -Icalculator/proto --go_out=. --go_opt=module=github.com/alexandreps1123/grpc-go --go-grpc_out=. --go-grpc_opt=module=github.com/alexandreps1123/grpc-go calculator/proto/calculator.proto calculator/proto/sum.proto calculator/proto/primes.proto calculator/proto/avg.proto
+$ protoc -Icalculator/proto --go_out=. --go_opt=module=github.com/alexandreps1123/grpc-go --go-grpc_out=. --go-grpc_opt=module=github.com/alexandreps1123/grpc-go calculator/proto/calculator.proto calculator/proto/sum.proto calculator/proto/primes.proto calculator/proto/avg.proto calculator/proto/sqrt.proto
 ```
