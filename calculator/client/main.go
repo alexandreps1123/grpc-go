@@ -9,7 +9,7 @@ import (
 	pb "github.com/alexandreps1123/grpc-go/calculator/proto"
 )
 
-var addr string = "localhost:50001"
+var addr string = "localhost:50051"
 
 func main() {
 
