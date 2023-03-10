@@ -40,3 +40,23 @@ generate gRPC code calculator
 ```
 $ protoc -Icalculator/proto --go_out=. --go_opt=module=github.com/alexandreps1123/grpc-go --go-grpc_out=. --go-grpc_opt=module=github.com/alexandreps1123/grpc-go calculator/proto/calculator.proto calculator/proto/sum.proto calculator/proto/primes.proto calculator/proto/avg.proto calculator/proto/sqrt.proto
 ```
+
+Docker compose:
+```
+$ docker-compose up
+```
+
+generate gRPC code blog
+```
+protoc -Iblog/proto --go_out=. --go_opt=module=github.com/alexandreps1123/grpc-go --go-grpc_out=. --go-grpc_opt=module=github.com/alexandreps1123/grpc-go blog/proto/blog.proto
+```
+
+go build server
+```
+$ go build -o bin/blog/server ./blog/server
+```
+
+go build client
+```
+$ go build -o bin/blog/client ./blog/client
+```
