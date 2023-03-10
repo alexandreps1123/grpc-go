@@ -24,4 +24,5 @@ func main() {
 	id := createBlog(c)
 	readBlog(c, id)           //valid
 	readBlog(c, "aslkdaskjl") //invalid
+	updateBlog(c, id)
 }
